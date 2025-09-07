@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css?v0.4">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
         <link rel="shortcut icon" href="img/favicon/favicon.ico">
@@ -17,14 +18,41 @@
     <body>
         <div class="p-Body">
             <div class="vCard--Wrapper">
+                <div class="lang-switcher">
+                    <span class="fi fi-am" onclick="setLang('am')"></span>
+                    <span class="fi fi-gb" onclick="setLang('en')"></span>
+                    <span class="fi fi-fr" onclick="setLang('fr')"></span>
+                    <span class="fi fi-ru" onclick="setLang('ru')"></span>
+                </div>
                 <div class="infoBlock">
                     <img src="img/avatar.jpg" alt="Avatar" class="avatar">
                     <div class="infoText">
-                        <h1 data-i18n="name_surname" class="title"></h1>
-                        <h4 data-i18n="description" class="subtitle"></h4>
+                        <div class="name">
+                            <h1 data-i18n="name_surname" class="title"></h1>
+                            <h4 data-i18n="description" class="subtitle"></h4>
+                        </div>
+                        <div class="social">
+                            <a href="https://www.linkedin.com/in/ruben-gayranyan" target="_blank"><img class="socialMedia LinkedIn" src="img/media/linkedin.png" alt="LinkedIn" /></a>
+                            <a href="https://github.com/RubenGayranyan" target="_blank"><img class="socialMedia GitHub" src="img/media/github.png" alt="GitHub" /></a>
+                            <a href="https://t.me/rub_g_yan" target="_blank"><img class="socialMedia Telegram" src="img/media/telegram.png" alt="Telegram" /></a>
+                            <a href="https://www.facebook.com/ruben.gayranyan" target="_blank"><img class="socialMedia Facebook" src="img/media/facebook.png" alt="Facebook" /></a>
+                            <a href="https://www.instagram.com/rub.gayranyan/" target="_blank"><img class="socialMedia Instagram" src="img/media/instagram.png" alt="Instagram" /></a>
+                            <a href="https://vk.com/rgayranyan" target="_blank"><img class="socialMedia VK" src="img/media/vk.png" alt="ВКонтакте" /></a>
+                            <a href="https://x.com/RGayranyan" target="_blank"><img class="socialMedia X" src="img/media/x.png" alt="X" /></a>
+                        </div>
+                        <a href="https://t.me/rgayranyan" target="_blank" class="channelJoin" data-i18n="tg_join"></a>
                     </div>
                 </div>
-                <p data-i18n="about" class="aboutMe"></p>
+                <div class="aboutMe">
+                    <p data-i18n="hi" class="aboutText hi"></p>
+                    <p data-i18n="about" class="aboutText line"></p>
+                    <p data-i18n="about2" class="aboutText line"></p>
+                    <p data-i18n="about_last" class="aboutText last"></p>
+                </div>
+                <div class="p-Footer">
+                    <br />
+                    <p style="font-family: Montserrat;text-align:center;color:#666666;font-size:9px;font-weight:bold;"><a href="https://rubengayranyan.github.io" target="_blank">DESIGNED BY <span style="text-decoration: underline dotted;">GAYRANYAN</span></a></p>
+                </div>
             </div>
         </div>
 
