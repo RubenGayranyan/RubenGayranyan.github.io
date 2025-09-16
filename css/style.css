@@ -17,18 +17,23 @@ body {
     line-height: 1.6;
 }
 
+.p-Body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: tahoma;
+    height: 95vh;
+}
+
 .vCard--Wrapper {
     box-shadow: 0px 0px 20px 13px #bababa;
     width: 750px;
     background: #ffffff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     padding: 30px;
     border-radius: 20px;
     border: 1px solid #bababa;
-    height: 480px;
+    min-height: 480px;
+    height: auto;
 }
 
 .avatar {
@@ -54,11 +59,9 @@ body {
     padding-left: 25px;
 }
 .lang-switcher {
-    position: absolute;
-    top: 15px;
-    right: 15px;
     display: flex;
     gap: 8px;
+    justify-content: flex-end;
 }
 
 .social {
@@ -87,9 +90,9 @@ body {
     padding: 10px;
     border-radius: 50px;
     font-weight: bold;
-    display: block;         /* Чтобы можно было центрировать */
-    text-align: center;     /* Текст по центру */
-    margin: 15px auto 0;    /* Верхний отступ + автополя слева и справа */
+    display: block;
+    text-align: center;
+    margin: 15px auto 0;
 }
 
 .channelJoin:hover {
@@ -97,9 +100,6 @@ body {
 }
 
 .p-Footer {
-    position: absolute;
-    bottom: 15px;
-    left: 0;
     width: 100%;
     text-align: center;
 }

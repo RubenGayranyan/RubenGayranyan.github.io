@@ -1,0 +1,21 @@
+@media screen and (max-width: 800px) {
+    .vCard--Wrapper {
+        width: 100%;
+    }
+    .infoBlock {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        align-items: center;
+    }
+    .infoText {
+        padding: 0;
+    }
+    .avatar {
+        border-radius: 90px;
+    }
+    .name {
+        text-align: center;
+    }
+}
