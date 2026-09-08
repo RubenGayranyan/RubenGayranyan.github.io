@@ -1,60 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/style.css?v0.5">
-        <link rel="stylesheet" href="css/media.css?v0.1">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css" />
-        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-        <link rel="shortcut icon" href="img/favicon/favicon.ico">
-        <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
-        <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
 
-        <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-        <title>vCard | GAYRANYAN</title>
-    </head>
-    <body>
-        <div class="p-Body">
-            <div class="vCard--Wrapper">
-                <div class="lang-switcher">
-                    <span class="fi fi-am" onclick="setLang('am')"></span>
-                    <span class="fi fi-gb" onclick="setLang('en')"></span>
-                    <span class="fi fi-fr" onclick="setLang('fr')"></span>
-                    <span class="fi fi-ru" onclick="setLang('ru')"></span>
-                </div>
-                <div class="infoBlock">
-                    <img src="img/avatar.jpg" alt="Avatar" class="avatar">
-                    <div class="infoText">
-                        <div class="name">
-                            <h1 data-i18n="name_surname" class="title"></h1>
-                            <h4 data-i18n="description" class="subtitle"></h4>
-                        </div>
-                        <div class="social">
-                            <a href="https://www.linkedin.com/in/ruben-gayranyan" target="_blank"><img class="socialMedia LinkedIn" src="img/media/linkedin.png" alt="LinkedIn" /></a>
-                            <a href="https://github.com/RubenGayranyan" target="_blank"><img class="socialMedia GitHub" src="img/media/github.png" alt="GitHub" /></a>
-                            <a href="https://t.me/rub_g_yan" target="_blank"><img class="socialMedia Telegram" src="img/media/telegram.png" alt="Telegram" /></a>
-                            <a href="https://www.facebook.com/ruben.gayranyan" target="_blank"><img class="socialMedia Facebook" src="img/media/facebook.png" alt="Facebook" /></a>
-                            <a href="https://www.instagram.com/rub.gayranyan/" target="_blank"><img class="socialMedia Instagram" src="img/media/instagram.png" alt="Instagram" /></a>
-                            <a href="https://vk.com/rgayranyan" target="_blank"><img class="socialMedia VK" src="img/media/vk.png" alt="ВКонтакте" /></a>
-                            <a href="https://x.com/RGayranyan" target="_blank"><img class="socialMedia X" src="img/media/x.png" alt="X" /></a>
-                        </div>
-                        <a href="https://t.me/rgayranyan" target="_blank" class="channelJoin" data-i18n="tg_join"></a>
-                    </div>
-                </div>
-                <div class="aboutMe">
-                    <p data-i18n="hi" class="aboutText hi"></p>
-                    <p data-i18n="about" class="aboutText line"></p>
-                    <p data-i18n="about2" class="aboutText line"></p>
-                    <p data-i18n="about_last" class="aboutText last"></p>
-                </div>
-                <div class="p-Footer">
-                    <br />
-                    <p style="font-family: Montserrat;text-align:center;color:#666666;font-size:9px;font-weight:bold;"><a href="https://rubengayranyan.github.io" target="_blank">DESIGNED BY <span style="text-decoration: underline dotted;">GAYRANYAN</span></a></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ruben Gayranyan — Cybersecurity Engineering Student | IT Educator | Former Air Defence Squad Commander. Yerevan, Armenia.">
+    <meta name="author" content="Ruben Gayranyan">
+    <meta property="og:title" content="root@ruben-gayranyan:~$">
+    <meta property="og:description"
+        content="Cybersecurity Engineering Student | IT Educator | Former Air Defence Squad Commander">
+    <meta property="og:image" content="img/avatar.png">
+    <title>root@ruben-gayranyan:~$</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicon/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="img/favicon/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.3.2/css/flag-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="crt-overlay" aria-hidden="true"></div>
+
+    <div class="terminal-window">
+
+        <div class="title-bar" aria-hidden="true">
+            <div class="title-bar-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+            </div>
+            <span class="title-bar-text">bash — ruben@kali: ~</span>
+            <div class="title-bar-right"></div>
+        </div>
+
+        <main class="terminal-body" role="main">
+
+            <div class="lang-switcher" role="navigation" aria-label="Language">
+                <span class="prompt-muted"># lang:</span>
+                <button class="lang-btn active" onclick="setLang('en')" aria-label="English">
+                    <span class="fi fi-gb"></span> EN
+                </button>
+                <button class="lang-btn" onclick="setLang('am')" aria-label="Armenian">
+                    <span class="fi fi-am"></span> AM
+                </button>
+                <button class="lang-btn" onclick="setLang('ru')" aria-label="Russian">
+                    <span class="fi fi-ru"></span> RU
+                </button>
+                <button class="lang-btn" onclick="setLang('fr')" aria-label="French">
+                    <span class="fi fi-fr"></span> FR
+                </button>
+            </div>
+
+            <div class="boot-block" aria-label="System info">
+                <p class="boot-line"><span class="c-green">[ OK ]</span> Loading profile... <span
+                        class="c-muted">done</span></p>
+                <p class="boot-line"><span class="c-green">[ OK ]</span> Mounting /home/ruben... <span
+                        class="c-muted">done</span></p>
+                <p class="boot-line"><span class="c-yellow">[INFO]</span> <span data-i18n="location_label">Location:</span> <span class="c-white" data-i18n="location_value">Yerevan, Armenia</span></p>
+                <p class="boot-line"><span class="c-yellow">[INFO]</span> <span data-i18n="age_label">Age:</span> <span class="c-white">21</span></p>
+                <p class="boot-line"><span class="c-cyan">[OPEN]</span> <span data-i18n="open_collab">Open to new opportunities &amp; collaborations</span></p>
+                <div class="tg-channel-line">
+                    <a href="https://t.me/rgayranyan" target="_blank" rel="noopener noreferrer" class="tg-channel-btn"
+                        id="tg-channel-btn">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span data-i18n="tg_join">join channel &rarr; t.me/rgayranyan</span>
+                    </a>
                 </div>
             </div>
-        </div>
-        <script src="js/languages.js?v0.6"></script>
-    </body>
+
+            <div class="cmd-block">
+                <div class="cmd-line">
+                    <span class="prompt-user" data-i18n="prompt_user">root@ruben-gayranyan</span><span
+                        class="prompt-sep">:</span><span class="prompt-path">~</span><span
+                        class="prompt-dollar">$</span>
+                    <span class="cmd-text">whoami</span>
+                </div>
+
+                <div class="output-block hero-output">
+                    <div class="avatar-inline">
+                        <img src="img/avatar.png" alt="Ruben Gayranyan" class="avatar-img">
+                        <div class="hero-info">
+                            <p class="hero-name" data-i18n="name_surname">Ruben Gayranyan</p>
+                            <p class="hero-role">
+                                <i class="fa-solid fa-briefcase"></i>
+                                Head of Branch | IT Educator @ Robix Lab
+                            </p>
+                            <p class="hero-role">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Cybersecurity Engineer @ Armenian Code Academy
+                            </p>
+                            <p class="hero-role">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                CS &amp; Applied Mathematics @ French University in Armenia
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-block">
+                <div class="cmd-line">
+                    <span class="prompt-user" data-i18n="prompt_user">root@ruben-gayranyan</span><span
+                        class="prompt-sep">:</span><span class="prompt-path">~/contacts</span><span
+                        class="prompt-dollar">$</span>
+                    <span class="cmd-text">ls -la</span>
+                </div>
+                <div class="output-block">
+                    <p class="ls-total">total 56</p>
+                    <div class="ls-list">
+                        <a href="https://www.linkedin.com/in/ruben-gayranyan" target="_blank" rel="noopener noreferrer"
+                            class="ls-row" aria-label="LinkedIn">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-linkedin-in"></i>
+                                linkedin.com/in/ruben-gayranyan</span>
+                        </a>
+                        <a href="https://github.com/RubenGayranyan" target="_blank" rel="noopener noreferrer"
+                            class="ls-row" aria-label="GitHub">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-github"></i>
+                                github.com/RubenGayranyan</span>
+                        </a>
+                        <a href="https://t.me/rub_g_yan" target="_blank" rel="noopener noreferrer" class="ls-row"
+                            aria-label="Telegram">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-telegram"></i>
+                                t.me/rub_g_yan</span>
+                        </a>
+                        <a href="https://www.facebook.com/ruben.gayranyan" target="_blank" rel="noopener noreferrer"
+                            class="ls-row" aria-label="Facebook">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-facebook-f"></i>
+                                facebook.com/ruben.gayranyan</span>
+                        </a>
+                        <a href="https://www.instagram.com/rub.gayranyan/" target="_blank" rel="noopener noreferrer"
+                            class="ls-row" aria-label="Instagram">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-instagram"></i>
+                                instagram.com/rub.gayranyan</span>
+                        </a>
+                        <a href="https://vk.com/rgayranyan" target="_blank" rel="noopener noreferrer" class="ls-row"
+                            aria-label="VKontakte">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-vk"></i>
+                                vk.com/rgayranyan</span>
+                        </a>
+                        <a href="https://x.com/RGayranyan" target="_blank" rel="noopener noreferrer" class="ls-row"
+                            aria-label="X / Twitter">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-brands fa-x-twitter"></i>
+                                x.com/RGayranyan</span>
+                        </a>
+                        <a href="mailto:ruben.gayranyan@gmail.com" class="ls-row" aria-label="Email">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-solid fa-envelope"></i>
+                                ruben.gayranyan@gmail.com</span>
+                        </a>
+                        <a href="https://xenforo.info/members/ruben.34785/" target="_blank" rel="noopener noreferrer" class="ls-row" aria-label="XenForo">
+                            <span class="ls-perm">-rw-r--r--</span>
+                            <span class="ls-links">1</span>
+                            <span class="ls-owner">ruben</span>
+                            <span class="ls-date">Sep&nbsp;&nbsp;8 21:46</span>
+                            <span class="ls-name"><i class="fa-solid fa-comments"></i>
+                                xenforo.info/members/ruben.34785/</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-block">
+                <div class="cmd-line">
+                    <span class="prompt-user" data-i18n="prompt_user">root@ruben-gayranyan</span><span
+                        class="prompt-sep">:</span><span class="prompt-path">~</span><span
+                        class="prompt-dollar">$</span>
+                    <span class="cmd-text">cat skills.json | jq '.skills[]'</span>
+                </div>
+                <div class="output-block">
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fa-brands fa-cuttlefish"></i> C/C++</span>
+                        <span class="skill-tag"><i class="fa-brands fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fa-brands fa-linux"></i> Linux</span>
+                        <span class="skill-tag"><i class="fa-brands fa-java"></i> Java</span>
+                        <span class="skill-tag"><i class="fa-solid fa-moon"></i> Lua</span>
+                        <span class="skill-tag"><i class="fa-brands fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fa-brands fa-js"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fa-brands fa-html5"></i> HTML/CSS</span>
+                        <span class="skill-tag"><i class="fa-solid fa-database"></i> SQL</span>
+                        <span class="skill-tag"><i class="fa-solid fa-network-wired"></i> Data Structures</span>
+                        <span class="skill-tag"><i class="fa-solid fa-comments"></i> XenForo</span>
+                        <span class="skill-tag"><i class="fa-solid fa-server"></i> System Architecture</span>
+                        <span class="skill-tag"><i class="fa-solid fa-cubes"></i> OOP</span>
+                        <span class="skill-tag"><i class="fa-solid fa-microchip"></i> IoT</span>
+                        <span class="skill-tag"><i class="fa-brands fa-github"></i> Git/GitHub</span>
+                        <span class="skill-tag"><i class="fa-solid fa-microchip"></i> Multithreading</span>
+                        <span class="skill-tag"><i class="fa-brands fa-microsoft"></i> MS Office</span>
+                        <span class="skill-tag"><i class="fa-solid fa-users-gear"></i> CRM</span>
+                        <span class="skill-tag"><i class="fa-solid fa-briefcase"></i> Office Administration</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cmd-block">
+                <div class="cmd-line">
+                    <span class="prompt-user" data-i18n="prompt_user">root@ruben-gayranyan</span><span
+                        class="prompt-sep">:</span><span class="prompt-path">~</span><span
+                        class="prompt-dollar">$</span>
+                    <span class="cmd-text">cat languages.cfg</span>
+                </div>
+                <div class="output-block">
+                    <p class="lang-line">
+                        <span class="fi fi-am lang-flag-sm"></span>
+                        <span class="c-white" data-i18n="lang_armenian">Armenian</span>
+                        <span class="lang-sep">=</span>
+                        <span class="c-green" data-i18n="lang_native">NATIVE</span>
+                    </p>
+                    <p class="lang-line">
+                        <span class="fi fi-gb lang-flag-sm"></span>
+                        <span class="c-white" data-i18n="lang_english">English</span>
+                        <span class="lang-sep">=</span>
+                        <span class="c-cyan" data-i18n="lang_professional">PROFESSIONAL</span>
+                    </p>
+                    <p class="lang-line">
+                        <span class="fi fi-ru lang-flag-sm"></span>
+                        <span class="c-white" data-i18n="lang_russian">Russian</span>
+                        <span class="lang-sep">=</span>
+                        <span class="c-cyan" data-i18n="lang_professional2">PROFESSIONAL</span>
+                    </p>
+                    <p class="lang-line">
+                        <span class="fi fi-fr lang-flag-sm"></span>
+                        <span class="c-white" data-i18n="lang_french">French</span>
+                        <span class="lang-sep">=</span>
+                        <span class="c-yellow" data-i18n="lang_limited">LIMITED</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="cmd-block last-cmd">
+                <div class="cmd-line">
+                    <span class="prompt-user" data-i18n="prompt_user">root@ruben-gayranyan</span><span
+                        class="prompt-sep">:</span><span class="prompt-path">~</span><span
+                        class="prompt-dollar">$</span>
+                    <span class="cursor-blink">_</span>
+                </div>
+            </div>
+
+            <footer class="terminal-footer">
+                <span class="c-muted"># designed by </span>
+                <a href="https://rubengayranyan.github.io" target="_blank" rel="noopener noreferrer"
+                    class="footer-link">GAYRANYAN</a>
+                <span class="c-muted"> — all rights reserved</span>
+            </footer>
+
+        </main>
+    </div>
+
+    <script src="js/languages.js"></script>
+</body>
+
 </html>

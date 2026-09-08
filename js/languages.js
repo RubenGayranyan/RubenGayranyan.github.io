@@ -1,56 +1,93 @@
 const translations = {
     am: {
+        prompt_user: "root@ruben-gayranyan",
         name_surname: "Ռուբեն Գայրանյան",
-        description: "Ուսանող, ծրագրավորող",
-        hi: "👋 Ողջո՜ւյն, ես՝ Ռուբեն եմ։",
-        about: "👩‍💻 Տեխնոլոգիաների և ծրագրավորման սիրահար. զբաղվում եմ վեբ, AI, դեսկթոփ և Android նախագծերով։",
-        about2: "🎓 Սովորում եմ Հայաստանի Ֆրանսիական համալսարանում՝ Ինֆորմատիկա և կիրառական մաթեմատիկա ֆակուլտետում։",
-        about_last: "🚀 Միշտ բաց եմ նոր մարտահրավերների և նախագծերի, որոնք զարգացնում են իմ հմտությունները։ ✨",
-        tg_join: "Միացի՛ր իմ ալիքին",
-        visits: "Դիտումներ՝"
+        role_line1: "> Կիբեռանվտանգության ինժեներության ուսանող — Armenian Code Academy",
+        role_line2: "> Տեղեկատվական տեխնոլոգիաների ուսուցիչ @ Robix Lab",
+        location_label: "Գտնվելու վայրը:",
+        location_value: "Երևան, Հայաստան",
+        age_label: "Տարիքը:",
+        open_collab: "Բաց եմ նոր առաջարկների և համագործակցության համար",
+        tg_join: "Միացի՛ր → t.me/rgayranyan",
+        lang_armenian: "Հայերեն",
+        lang_english: "Անգլերեն",
+        lang_russian: "Ռուսերեն",
+        lang_french: "Ֆրանսերեն",
+        lang_native: "NATIVE",
+        lang_professional: "PROFESSIONAL_WORKING",
+        lang_professional2: "PROFESSIONAL_WORKING",
+        lang_limited: "LIMITED_WORKING"
     },
     en: {
-        name_surname: "Ruben Gayrayan",
-        description: "Student, Programmer",
-        hi: "👋 Hi, I’m Ruben.",
-        about: "👩‍💻 I am passionate about technology and programming, working on Web, AI, Desktop, and Android projects.",
-        about2: "🎓 I study at the French University in Armenia, Faculty of Informatics and Applied Mathematics.",
-        about_last: "🚀 Always open to new challenges and projects that help me grow my skills. ✨",
-        tg_join: "Join my channel",
-        visits: "Visits:"
+        prompt_user: "root@ruben-gayranyan",
+        name_surname: "Ruben Gayranyan",
+        role_line1: "> Cybersecurity Engineering Student — Armenian Code Academy",
+        role_line2: "> IT Educator @ Robix Lab",
+        tg_join: "join channel → t.me/rgayranyan",
+        lang_armenian: "Armenian",
+        lang_english: "English",
+        lang_russian: "Russian",
+        lang_french: "French",
+        lang_native: "NATIVE",
+        lang_professional: "PROFESSIONAL_WORKING",
+        lang_professional2: "PROFESSIONAL_WORKING",
+        lang_limited: "LIMITED_WORKING"
     },
     ru: {
+        prompt_user: "root@ruben-gayranyan",
         name_surname: "Рубен Гайранян",
-        description: "Студент, программист",
-        hi: "👋 Привет, я Рубен.",
-        about: "👩‍💻 Увлекаюсь технологиями и программированием, занимаюсь веб, AI, десктоп и Android проектами.",
-        about2: "🎓 Учусь во Французском университете в Армении, факультет информатики и прикладной математики.",
-        about_last: "🚀 Всегда открыт новым вызовам и проектам, которые развивают мои навыки. ✨",
-        tg_join: "Подпишись к моему каналу",
-        visits: "Просмотры:"
+        role_line1: "> Студент кибербезопасности — Armenian Code Academy",
+        role_line2: "> IT Педагог @ Robix Lab",
+        location_label: "Местоположение:",
+        location_value: "Ереван, Армения",
+        age_label: "Возраст:",
+        open_collab: "Открыт для новых предложений и сотрудничества",
+        tg_join: "подписаться → t.me/rgayranyan",
+        lang_armenian: "Армянский",
+        lang_english: "Английский",
+        lang_russian: "Русский",
+        lang_french: "Французский",
+        lang_native: "NATIVE",
+        lang_professional: "PROFESSIONAL_WORKING",
+        lang_professional2: "PROFESSIONAL_WORKING",
+        lang_limited: "LIMITED_WORKING"
     },
     fr: {
-        name_surname: "Ruben Gayrayan",
-        description: "Étudiant, programmeur",
-        hi: "👋 Bonjour, je suis Ruben.",
-        about: "👩‍💻 Passionné par la technologie et la programmation, je travaille sur des projets Web, AI, Desktop et Android.",
-        about2: "🎓 J’étudie à l’Université Française en Arménie, en Informatique et Mathématiques Appliquées.",
-        about_last: "🚀 Toujours ouvert aux nouveaux défis et projets qui développent mes compétences. ✨",
-        tg_join: "Rejoignez ma chaîne",
-        visits: "Vues:"
+        prompt_user: "root@ruben-gayranyan",
+        name_surname: "Ruben Gayranyan",
+        role_line1: "> Étudiant en Cybersécurité — Armenian Code Academy",
+        role_line2: "> Éducateur IT @ Robix Lab",
+        location_label: "Lieu :",
+        location_value: "Erevan, Arménie",
+        age_label: "Âge :",
+        open_collab: "Ouvert aux nouvelles opportunités & collaborations",
+        tg_join: "Rejoindre le canal → t.me/rgayranyan",
+        lang_armenian: "arménien",
+        lang_english: "anglais",
+        lang_russian: "russe",
+        lang_french: "français",
+        lang_native: "NATIVE",
+        lang_professional: "PROFESSIONAL_WORKING",
+        lang_professional2: "PROFESSIONAL_WORKING",
+        lang_limited: "LIMITED_WORKING"
     }
 };
 
-
-const defaultLang = "am";
+const defaultLang = "en";
 
 function loadLanguage(lang) {
     const t = translations[lang] || translations[defaultLang];
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (t[key]) el.textContent = t[key];
+        if (t[key] !== undefined) el.textContent = t[key];
     });
     document.documentElement.setAttribute("lang", lang);
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.remove("active");
+        if (btn.getAttribute("onclick") === `setLang('${lang}')`) {
+            btn.classList.add("active");
+        }
+    });
 }
 
 function setLang(lang) {
