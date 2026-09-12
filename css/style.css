@@ -51,7 +51,6 @@ body {
 
 img, a {
     -webkit-user-drag: none;
-    user-drag: none;
 }
 
 a {
