@@ -1,5 +1,3 @@
-
-
 const canvas = document.createElement('canvas');
 canvas.id = 'matrixCanvas';
 canvas.style.position = 'fixed';
@@ -13,12 +11,19 @@ canvas.style.pointerEvents = 'none';
 document.body.insertBefore(canvas, document.body.firstChild);
 
 const ctx = canvas.getContext('2d');
-let width, height;
+let width = 0;
+let height = 0;
 let columns = 0;
 let drops = [];
+let animationInterval = null;
 
 const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%""\'#&_(),.;:?!\\|{}<>[]^~アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレゲゼデベペオォコソトノホモヨョロゴゾドボポヴッン'.split('');
 const fontSize = 14;
+
+function isMobile() {
+    return window.matchMedia('(max-width: 768px)').matches ||
+           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
 function resize() {
     width = canvas.width = window.innerWidth;
@@ -32,8 +37,6 @@ function resize() {
     }
     columns = newColumns;
 }
-window.addEventListener('resize', resize);
-resize();
 
 function draw() {
     ctx.fillStyle = 'rgba(8, 8, 8, 0.07)'; 
@@ -63,4 +66,31 @@ function draw() {
     }
 }
 
-setInterval(draw, 33);
+function startAnimation() {
+    if (animationInterval) return;
+    canvas.style.display = 'block';
+    resize();
+    animationInterval = setInterval(draw, 33);
+}
+
+function stopAnimation() {
+    if (animationInterval) {
+        clearInterval(animationInterval);
+        animationInterval = null;
+    }
+    canvas.style.display = 'none';
+    if (width && height) {
+        ctx.clearRect(0, 0, width, height);
+    }
+}
+
+function updateState() {
+    if (isMobile()) {
+        stopAnimation();
+    } else {
+        startAnimation();
+    }
+}
+
+window.addEventListener('resize', updateState);
+updateState();

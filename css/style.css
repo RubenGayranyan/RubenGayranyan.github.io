@@ -766,3 +766,9 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
     background: #28c40e;
 }
+
+@media (max-width: 768px) {
+    #matrixCanvas {
+        display: none !important;
+    }
+}
